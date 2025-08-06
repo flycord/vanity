@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuaCord Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-discord"></i> LUACORD</h1>
+            <p class="description">Bir Discord sunucusunun bilgilerini öğrenmek için vanity kodunu girin</p>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" id="inviteCode" placeholder="örnek: verified" required>
+                <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i> Sorgula</button>
+            </div>
+        </header>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Sunucu bilgileri alınıyor...</p>
+        </div>
+        
+        <div class="result-container" id="resultContainer">
+            <div class="guild-header">
+                <img id="guildIcon" class="guild-icon" alt="Sunucu Icon">
+                <div class="guild-info">
+                    <h2 class="guild-name" id="guildName">
+                        <span id="guildNameText"></span>
+                        <span class="badge" id="guildBadge"></span>
+                    </h2>
+                    <p class="guild-description" id="guildDescription"></p>
+                    
+                    <div class="guild-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span id="memberCount"></span> üye
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-circle"></i>
+                            <span id="onlineCount"></span> çevrimiçi
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-bolt"></i>
+                            <span id="boostCount"></span> boost
+                        </div>
+                        <div class="stat-item" id="verificationLevelContainer">
+                            <i class="fas fa-shield-alt"></i>
+                            Doğrulama seviyesi: <span id="verificationLevel"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-card">
+                    <h3 class="detail-title"><i class="fas fa-info-circle"></i> Temel Bilgiler</h3>
+                    <ul class="feature-list" id="basicInfoList"></ul>
+                </div>
+                
+                <div class="detail-card">
+                    <h3 class="detail-title"><i class="fas fa-star"></i> Özellikler</h3>
+                    <ul class="feature-list" id="featuresList"></ul>
+                </div>
+                
+                <div class="detail-card">
+                    <h3 class="detail-title"><i class="fas fa-tags"></i> Etiketler</h3>
+                    <ul class="feature-list" id="traitsList"></ul>
+                </div>
+                
+                <div class="detail-card">
+                    <h3 class="detail-title"><i class="fas fa-door-open"></i> Davet Bilgileri</h3>
+                    <ul class="feature-list" id="inviteInfoList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p class="developer">Developed by <a href="https://discord.com/users/788686743427612673" target="_blank">.mentalite.</a></p>
+            
+            <div class="social-links">
+                <a href="https://discord.com/users/788686743427612673" class="social-link" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://instagram.com/mentalitexyz" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
